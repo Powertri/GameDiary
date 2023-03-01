@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+}
+
+.flexbox-container {
+    display: flex;
+    height: 100%;
+}
+
+.nav {
+    width: 10%;
+    flex: 0.1;
+    border-right: 2px;
+    border-style: solid;
+    border-color: black;
+    height: 100%;
+}
+
+.slider {
+    display: flex;
+    gap: 1rem;
+}

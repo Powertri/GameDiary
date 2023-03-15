@@ -1,5 +1,96 @@
-h1 {
-    font-size: 3.75rem;
-    font-weight: 900;
-    color: #000;
+@import url(@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap'););
+@import url(@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Montserrat:wght@500&display=swap'););
+
+*{margin: 0; 
+padding: 0;
+box-sizing: border-box;
 }
+
+:root{
+    font-size: 100%;
+    --font-default: 'Montserrat';
+    --font-head: 'Lato';
+    --color-default: white;
+    --color-secundary: black;    
+}
+
+body{
+    font-family: var(--color-default);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    height: 100vh;
+    background-image: url('../css/images/fota.jpg');
+    background-size: cover;
+    color: var(--color-default);
+    padding: 24rem 19rem;
+}
+
+h1,
+h2,
+h3{
+    font-family: var(--font-head);
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+h2{
+    font-size: 4.4rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+p{
+    font-size: 3rem;
+}
+
+
+span{
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+}
+
+.botao{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 3.4rem;
+
+    padding-top: 1.2rem;
+    padding-left: 7.6rem;
+
+    color: #fff;
+
+    background: linear-gradient(90deg, #2193B0 -59.18%, #6DD5ED 100%);
+    border-radius: 0.5rem;
+
+    text-decoration: none;
+}
+
+section{
+    display: flex;
+    gap: ;
+    padding: 0.6rem;
+}
+
+.avatar{
+    border-radius: 50%;
+}
+
+#texto-apresentacao{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 2rem;
+}
+

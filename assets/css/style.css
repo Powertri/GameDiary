@@ -1,0 +1,45 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    background-image: src('/assets/images/Top.png');
+    background-repeat: repeat;
+}
+
+.container {
+    height: 100%;
+}
+
+.flexbox-container {
+    display: flex;
+    height: 100%;
+}
+
+.nav {
+    width: 10%;
+    flex: 0.1;
+    border-right: 2px;
+    border-style: solid;
+    border-color: grey;
+    height: 100%;
+}
+
+main#carousel {
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 10px;
+    margin-top: 5vh;
+    border-radius: 10px;
+  }
+
+  main#carousel img {
+    border-radius: 15px;
+  }
+
+  .carrousel-arrow {
+    height: 50px;
+  }

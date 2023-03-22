@@ -1,9 +1,10 @@
 @import url(@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap'););
 @import url(@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Montserrat:wght@500&display=swap'););
 
-*{margin: 0; 
-padding: 0;
-box-sizing: border-box;
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root{
@@ -27,7 +28,8 @@ header{
     background-image: url('../css/images/fota.jpg');
     background-size: cover;
     color: var(--color-default);
-    padding: 24rem 19rem;
+    padding: 21rem 11rem;
+   /* padding: 24rem 19rem;*/
 }
 
 h1,
@@ -39,7 +41,7 @@ h3{
 
 h1 {
     font-size: 5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     color: white;
 }
 
@@ -55,13 +57,20 @@ p{
 
 
 span{
-    font-size: 2rem;
+    font-size: 4.5rem;
     font-weight: 400;
     color: white;
 }
 
 .botao{
-    font-style: normal;
+    padding: 1.4rem 11rem;
+    background: linear-gradient(90deg, hsl(207, 99%, 33%) 0%, #44baff 100%);
+    border-radius: 10px;
+    font-size: 3rem;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+  /*  font-style: normal;
     font-weight: 400;
     font-size: 3rem;
     line-height: 3.4rem;
@@ -74,7 +83,7 @@ span{
     background: linear-gradient(90deg, #2193B0 -59.18%, #6DD5ED 100%);
     border-radius: 0.5rem;
 
-    text-decoration: none;
+    text-decoration: none;*/
 }
 
 section{

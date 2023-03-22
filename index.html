@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +9,49 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" media="screen" />
     <title>Game Diary</title>
 </head>
+
 <body>
     <div class="container">
         <div class="flexbox-container">
             <div class="nav">
-                <img src="./assets/images/Logo (2).png" />
+                <img src="./assets/images/logo.png" />
                 <div class="menu">
                 </div>
             </div>
             <div class="content">
-                <main id="carousel">
-                    <img src="./assets/images/Red_Dead_Redemption_capa.png" />
-                    <img src="./assets/images/Red_Dead_Redemption_capa.png" />
-                    <img src="./assets/images/Red_Dead_Redemption_capa.png" />
-                    <img src="./assets/images/Red_Dead_Redemption_capa.png" />
-                    <img src="./assets/images/Red_Dead_Redemption_capa.png" />
-                <main>
-                <embed class="carrousel-arrow" src="./assets/images/right-arrow-svgrepo-com.svg" />
+                <div>
+                    <ul id="carousel">
+                        <li>
+                            <img src="./assets/images/Red_Dead_Redemption_capa.png" />
+                        </li>
+                        <li>
+                            <img src="./assets/images/ts4.png" />
+                        </li>
+                        <li>
+                            <img src="./assets/images/ts3.jpg" />
+                        </li>
+                        <li>
+                            <img src="./assets/images/horizon.png" />
+                        </li>
+                        <li>
+                            <img src="./assets/images/Red_Dead_Redemption_capa.png" />
+                        </li>
+                    </ul>
+                </div>
+                <div id="carrousel-arrows-div">
+                    <button onclick="saudacao()" >
+                        <img class="carrousel-arrow-left" src="./assets/images/right-arrow-svgrepo-com.svg" />
+                    </button>
+                    <button onclick="saudacao()">
+                        <img class="carrousel-arrow-right" src="./assets/images/right-arrow-svgrepo-com.svg" />
+                    </button>
+                </div>
+            </div>
         </div>
-
     </div>
-    
+
 </body>
+
 </html>
+
+<script src="./index.js"></script>

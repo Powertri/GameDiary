@@ -139,6 +139,7 @@ gap: 2rem;
 
 .card:hover .card-image{
     opacity: .2;
+    transition: opacity .5s ease-in-out, bottom .5s;
 }
 
 .card:hover .card-info{
@@ -154,7 +155,44 @@ gap: 2rem;
 
 .card-info{
     position: absolute;
-    bottom: 0%;
+    bottom: 10%;
     opacity: 0;
     transition: opacity .5s ease-in-out, bottom .5s;
+}
+
+#secao-orcamento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #212121;
+}
+
+#secao-orcamento form{
+  display: grid;
+  justify-content: start;
+  row-gap: 1rem;
+  grid-template-columns: 1fr auto;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  position: relative;
+}
+
+#secao-orcamento output{
+  grid-column: 2;
+}
+
+#secao-orcamento h3{
+  position: absolute;
+  top: -10%;
+  background-color: #6A3093;
+  color: #FFFFFF;
+}
+
+input[type=number]{
+  padding: .5rem;
+  background-color: #212121;
+  color: var(--color-default);
+  border: none;
 }

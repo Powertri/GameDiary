@@ -36,8 +36,18 @@ html, body {
   align-items: center;
 }
 
-#nav img{
+#menu-logo{
+  flex: 1;
   height: 15vh;
+}
+
+#menu-logo> img {
+  height: 15vh;
+}
+
+#menu-icon {
+  flex: 1;
+  height: 30px;
 }
 
 #content {
@@ -103,7 +113,6 @@ h3, h4 {
 .card {
     position: relative;
     cursor: pointer;
-
 }
 
 .card:hover .card-image{

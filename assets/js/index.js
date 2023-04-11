@@ -1,4 +1,4 @@
-function saudacao()
+function nextImage()
 {
     var carouselDocumentElement = document.getElementById("carousel"); 
     var liDocumentElement = carouselDocumentElement.getElementsByTagName("li"); 

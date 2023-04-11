@@ -27,7 +27,7 @@ html, body {
 #nav {
   border-right: 2px;
   border-style: solid;
-  border-color: grey;
+  border-color: #808080;
   height: 100%;
   display: flex;
   min-width: 10vw;
@@ -45,9 +45,13 @@ html, body {
   height: 15vh;
 }
 
-#menu-icon {
+#menu-icon-img {
   flex: 1;
   height: 30px;
+}
+
+#menu-icon {
+  flex: 1;
 }
 
 #content {

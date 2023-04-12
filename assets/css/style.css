@@ -30,7 +30,7 @@ html, body {
   border-color: #808080;
   height: 100%;
   display: flex;
-  min-width: 10vw;
+  min-width: fit-content;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -43,15 +43,16 @@ html, body {
 
 #menu-logo> img {
   height: 15vh;
+  
+}
+
+#menu-icon {
+  flex: 1;
 }
 
 #menu-icon-img {
   flex: 1;
   height: 30px;
-}
-
-#menu-icon {
-  flex: 1;
 }
 
 #content {
@@ -74,7 +75,10 @@ html, body {
   object-fit: cover;
   width: 250px;
   height: 350px;
+  animation-duration: 4s;
+  animation-name: slidein;
 }
+
 
 li:nth-child(2n) {
   margin-top: 50px;
@@ -88,11 +92,13 @@ li:nth-child(2n) {
 
 .carrousel-arrow-right {
   height: 20px;
+  cursor: pointer;
 }
 
 .carrousel-arrow-left {
   height: 20px;
   transform: rotate(180deg);
+  cursor: pointer;
 }
 
 button {
@@ -105,6 +111,13 @@ p {
     font-family: var(--font-default);
     color: var(--color-default);
     font-weight: 200;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: var(--font-default);
+  color: var(--color-default);
+  font-weight: 100;
 }
 
 h3, h4 {
@@ -144,4 +157,29 @@ h3, h4 {
     flex-direction: column;
     gap: 6px;
     text-align: center;
+}
+
+form {
+  font-size: 1.8rem;
+  font-family: var(--font-default);
+  color: var(--color-default);
+  font-weight: 200;
+}
+
+form > input {
+  height: 5vh;
+  border: 0;
+  border-radius: 30px;
+}
+
+#form-content {
+  padding: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 5p;
 }

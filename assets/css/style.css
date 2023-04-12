@@ -24,6 +24,40 @@ body{
     font-family: var(--color-default);
 }
 
+.hamburguer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2.4rem;
+    width: 2.4rem;
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.linha{
+    height: .5rem;
+    width: 100%;
+    background-color: #FFF;
+    box-shadow: .2px 2px 2px #000;
+}
+
+.menu{
+    height: 30rem;
+    width: 20rem;
+    position: fixed;
+    right: -20rem;
+    background-color: #FFF;
+    z-index: 9;
+}
+
+.show-menu{
+    right: 0;
+
+}
+
 header{
     display: flex;
     flex-direction: column;
@@ -169,14 +203,15 @@ gap: 2rem;
 }
 
 #secao-orcamento form{
-  display: grid;
-  justify-content: start;
-  row-gap: 1rem;
-  grid-template-columns: 1fr auto;
-  padding: 2rem;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+    row-gap: 1rem;
+    padding: 4rem 2rem;
+    background-color: #FFF;
+    border-radius: 10px;
+    position: relative;
+    font-size: 1.6rem;
 }
 
 #secao-orcamento output{
@@ -184,15 +219,21 @@ gap: 2rem;
 }
 
 #secao-orcamento h3{
-  position: absolute;
-  top: -10%;
-  background-color: #6A3093;
-  color: #FFFFFF;
+    position: absolute;
+    top: -10%;
+    left: 1rem;
+    background-color: #6A3093;
+    color: #FFF;
+    padding: .7rem;
+    border-radius: 5px;
 }
 
 input[type=number]{
-  padding: .5rem;
-  background-color: #212121;
-  color: var(--color-default);
-  border: none;
+    padding: .5rem;
+    background-color: #949494;
+    color: var(--color-default);
+    border: none;
+    border-radius: .3rem;
 }
+
+

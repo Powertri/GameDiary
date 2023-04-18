@@ -1,95 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' />
-    <link rel="stylesheet" type="text/css" href="/assets/css/reset.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" media="screen" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/css/reset.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/css/style.css"
+      media="screen"
+    />
     <title>Game Diary</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-            <div id="nav">
-                <div id="menu-logo">
-                    <img src="./assets/images/Logo.svg" />
-                </div>
-                <div id="menu-icon">
-                    <a href="/new-game.html">
-                    <img id="menu-icon-img" src="./assets/images/menu.svg" />
-                </a>
+      <div id="nav">
+        <div id="menu-logo">
+          <img src="./assets/images/Logo.svg" />
+        </div>
+        <div id="menu-icon">
+          <a href="/new-game.html">
+            <img id="menu-icon-img" src="./assets/images/menu.svg" />
+          </a>
+        </div>
+      </div>
+      <div id="content">
+        <div id="carousel-container">
+          <ul id="carousel">
+            <li class="card">
+              <div class="card-image">
+                <img src="./assets/images/Red_Dead_Redemption_capa.png" />
+              </div>
+              <div onClick="showGame(this.id)" class="card-info" id="redDeadRedemption">
+                <h4>Red Dead Redemption</h4>
+                <p>Nota: 10/10</p>
+                <p>Mecânicas inovadoras e ambientação impecável.</p>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-image">
+                <img src="./assets/images/ts4.png" />
+              </div>
+              <div class="card-info">
+                <h4>The Sims 4</h4>
+                <p>Nota: 8/10</p>
+                <p>Relaxante e divertido, pena que cheio de contéudos pagos.</p>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-image">
+                <img src="./assets/images/cp77.png" />
+              </div>
+              <div class="card-info">
+                <h4>Cyberpunk 2077</h4>
+                <p>Nota: 9/10</p>
+                <p>
+                  História envolvente e gameplay viciante, mas peca na
+                  otimização.
+                </p>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-image">
+                <img src="./assets/images/horizon.png" />
+              </div>
+              <div class="card-info">
+                <h4>Horizon Zero Dawn</h4>
+                <p>Nota: 7/10</p>
+                <p>
+                  Gráficos incríveis, mas possui gameplay rasa e repetitiva.
+                </p>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card-image">
+                <img src="./assets/images/sm.jpg" />
+              </div>
+              <div class="card-info">
+                <h4>Marvel Spider Man</h4>
+                <p>Nota: 10/10</p>
+                <p>
+                  Imersão única em jogos de super-heróis, com roteiro e
+                  atributos técnicos impecáveis.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div id="carrousel-arrows-div">
+            <button onclick="lastImage()">
+              <img
+                class="carrousel-arrow-left"
+                src="./assets/images/right-arrow-svgrepo-com.svg"
+              />
+            </button>
+            <button onclick="nextImage()">
+              <img
+                class="carrousel-arrow-right"
+                src="./assets/images/right-arrow-svgrepo-com.svg"
+              />
+            </button>
+          </div>
+        </div>
+        <div id="game-information">
+            <div id="game-information-card">
+                <h2 id="game-information-img">
+                    <img />
+                </h2>
+                <div id="game-information-card-text">
+                    <h2 id="game-information-title">The sims</h2>
+                    <p id="game-information-description"> TEXT</p>
                 </div>
             </div>
-            <div id="content">
-                    <ul id="carousel">
-                        <li class="card">
-                            <div class="card-image">
-                                <img src="./assets/images/Red_Dead_Redemption_capa.png" />
-                            </div>
-                            <div class="card-info">
-                                <h4>Red Dead Redemption</h4>
-                                <p>Nota: 10/10</p>
-                                <p>Mecânicas inovadoras e ambientação impecável.</p>
-                            </div>
-                        </li>
-                        <li class="card">
-                            <div class="card-image">
-                                <img src="./assets/images/ts4.png" />
-                            </div>
-                            <div class="card-info">
-                                <h4>The Sims 4</h4>
-                                <p>Nota: 8/10</p>
-                                <p>Relaxante e divertido, pena que cheio de contéudos pagos.</p>
-                            </div>
-                        </li>
-                        <li class="card">
-                            <div class="card-image">
-                                <img src="./assets/images/cp77.png" />
-                            </div>
-                            <div class="card-info">
-                                <h4>Cyberpunk 2077</h4>
-                                <p>Nota: 9/10</p>
-                                <p>História envolvente e gameplay viciante, mas peca na otimização.</p>
-                            </div>
-                        </li>
-                        <li class="card">
-                            <div class="card-image">
-                                <img src="./assets/images/horizon.png" />
-                            </div>
-                            <div class="card-info">
-                                <h4>Horizon Zero Dawn</h4>
-                                <p>Nota: 7/10</p>
-                                <p>Gráficos incríveis, mas possui gameplay rasa e repetitiva.</p>
-                            </div>
-                        </li>
-                        <li class="card">
-                            <div class="card-image">
-                                <img src="./assets/images/sm.jpg" />
-                            </div>
-                            <div class="card-info">
-                                <h4>Marvel Spider Man </h4>
-                                <p>Nota: 10/10</p>
-                                <p>Imersão única em jogos de super-heróis, com roteiro e atributos técnicos impecáveis.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div id="carrousel-arrows-div">
-                        <button onclick="lastImage()" >
-                            <img class="carrousel-arrow-left" src="./assets/images/right-arrow-svgrepo-com.svg" />
-                        </button>
-                        <button onclick="nextImage()">
-                            <img class="carrousel-arrow-right" src="./assets/images/right-arrow-svgrepo-com.svg" />
-                        </button>
-                    </div>
-                </div>
-            </div>
+        </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
 
 <script src="./assets/js/index.js"></script>
+<script src="./assets/js/store.js"></script>

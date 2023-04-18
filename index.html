@@ -20,19 +20,37 @@
       href="/assets/css/style.css"
       media="screen"
     />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Game Diary</title>
   </head>
 
   <body>
+  <nav class="menu">
+      <ul>
+          <li>
+              <a href="index.html">
+                  Reviews
+              </a>
+          </li>
+          <li>
+              <a href="new-game.html">
+                  Cadastro
+              </a>
+          </li>
+      </ul>
+  </nav>
     <div class="container">
       <div id="nav">
         <div id="menu-logo">
           <img src="./assets/images/Logo.svg" />
         </div>
-        <div id="menu-icon">
-          <a href="/new-game.html">
-            <img id="menu-icon-img" src="./assets/images/menu.svg" />
-          </a>
+        <div class="hamburguer">
+          <div class="linha"></div>
+          <div class="linha"></div>
+          <div class="linha"></div>
         </div>
       </div>
       <div id="content">
@@ -125,8 +143,11 @@
         </div>
       </div>
     </div>
+
   </body>
 </html>
 
+
+<script src="./assets/js/menu.js"></script>
 <script src="./assets/js/index.js"></script>
 <script src="./assets/js/store.js"></script>

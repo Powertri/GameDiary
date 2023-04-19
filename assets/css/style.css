@@ -25,38 +25,63 @@ body{
 }
 
 .hamburguer{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 2.4rem;
-    width: 2.4rem;
-    position: fixed;
-    right: 2rem;
-    top: 2rem;
-    z-index: 10;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 2.4rem;
+  width: 2.4rem;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  z-index: 10;
+  cursor: pointer;
 }
 
 .linha{
-    height: .5rem;
-    width: 100%;
-    background-color: #FFF;
-    box-shadow: .2px 2px 2px #000;
+  height: .5rem;
+  width: 100%;
+  background-color: #FFF;
+  box-shadow: 2px 2px 2px #000;
 }
 
 .menu{
-    height: 30rem;
-    width: 20rem;
-    position: fixed;
-    right: -20rem;
-    background-color: #FFF;
-    z-index: 9;
+  height: 100vh;
+  width: 20rem;
+  position: fixed;
+  right: -20rem;
+  background-color: #FFF;
+  z-index: 9;
+  transition: right 1s;
+  font-size: 1.8rem;
 }
+
+.menu a{
+  text-decoration: none;
+  color: var(--color-secundary);
+}
+.menu a:hover{
+  color: #6A3093;
+}
+
+.menu ul{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+  gap: 1.6rem
+}
+
+.menu li{
+  list-style: none;
+}
+
+
 
 .show-menu{
-    right: 0;
-
+  right: 0;
 }
+
 
 header{
     display: flex;
@@ -79,7 +104,7 @@ h3{
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: clamp(3rem,5vw,6rem);
     margin-bottom: 3rem;
     color: white;
 }
@@ -109,20 +134,6 @@ span{
     color: #FFFFFF;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     text-decoration: none;
-  /*  font-style: normal;
-    font-weight: 400;
-    font-size: 3rem;
-    line-height: 3.4rem;
-
-    padding-top: 1.2rem;
-    padding-left: 7.6rem;
-
-    color: #fff;
-
-    background: linear-gradient(90deg, #2193B0 -59.18%, #6DD5ED 100%);
-    border-radius: 0.5rem;
-
-    text-decoration: none;*/
 }
 
 section{
@@ -236,4 +247,14 @@ input[type=number]{
     border-radius: .3rem;
 }
 
-
+@media (max-width: 900px) {
+  #secao-projetos ul{
+    flex-direction: column;
+  }
+  .large-only{
+    display: none;
+  }
+  #secao-orcamento form{
+    grid-template-columns: 1fr;
+  }
+}

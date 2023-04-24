@@ -1,34 +1,35 @@
-class Game {
-  constructor(title, image, rate, description, idReference) {
-    this.title = title;
-    this.image = image;
-    this.rate = rate;
-    this.description = description;
-    this.idReference = idReference;
-  }
-}
+import data from './data.js';
 
-const redDeadRedemption = new Game('Red Dead Redemption', './assets/images/Red_Dead_Redemption_capa.png', 5, 'aaaaa', 'redDeadRedemption');
-const theSims4 = new Game('The Sims 4', 'teste', 5, 'aaaaa');
-const cyperPunk = new Game('Cyper Punk', 'teste', 5, 'aaaaa');
+const carousel = document.getElementById('carousel');
+var allElements = [];
 
-const allGames = [redDeadRedemption, theSims4, cyperPunk];
+data.allLoadedGames.forEach((eachLoadedGame) => {
 
-function putInGameInformationCard(game) {
-  const image = document.getElementById('game-information-img').querySelector('#game-information-img img');
-  const divTitle = document.getElementById('game-information-title');
-  const divDescription = document.getElementById('game-information-description');
-  image.setAttribute('src', game.image);
-  divTitle.innerText = game.title;
-  divDescription.innerText = game.description;
-}
-
-function showGame(id) {
-  allGames.forEach((eachGame) => {
-    if (eachGame.idReference == id) {
-      console.log('caiu')
-      putInGameInformationCard(eachGame);
+  let html = '';
+  for (var i = 0; i < 5; i++) {
+    if (eachLoadedGame.rate > i) {
+      html = html + '<span class="fa fa-star checked"></span>';
+    } else {
+      html = html + '<span class="fa fa-star"></span>';
     }
-  })
-}
+ }
+ console.log(html);
+  const newElement = `
+    <li class="card">
+    <div class="card-image">
+      <img src="${eachLoadedGame.image}" />
+    </div>
+    <div onClick="putInGameInformationCard(this.id)" class="card-info" id="${eachLoadedGame.idReference}">
+      <h4>${eachLoadedGame.title}</h4>
+      <div class="star-rating">
+        ${html}
+      </div>
+      <p>${eachLoadedGame.shortReview}</p>
+    </div>
+  </li>
+  `
 
+  allElements.push(newElement);
+});
+
+carousel.innerHTML = allElements;

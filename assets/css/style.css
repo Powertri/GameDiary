@@ -255,23 +255,23 @@ h4 {
   justify-content: flex-start;
   gap: 4vw;
   background-color: #808080;
-  min-height: 100%;
   border-radius: 10px;
 }
 
 #game-information-card img{
   border-radius: 10px;
-  max-height: 100%;
-  width: 20vw;
+  height: 450px;
+  width: 300px;
   object-fit: cover;
 }
 
 #game-information-card-text {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
   gap: 4vh;
   padding: 4vh;
+  width: 100%;
 }
 
 .flex-horizontal {

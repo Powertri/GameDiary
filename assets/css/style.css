@@ -211,6 +211,8 @@ h4 {
 .card {
   position: relative;
   cursor: pointer;
+  border-radius: 10px;
+  background-color: #000;
 }
 
 .card:hover .card-image {
@@ -227,6 +229,7 @@ h4 {
   height: 400px;
   width: 300px;
   border-radius: 10px;
+  background-color: #000;
 }
 
 .card-info {
@@ -240,30 +243,6 @@ h4 {
   text-align: center;
 }
 
-form {
-  font-size: 1.8rem;
-  font-family: var(--font-default);
-  color: var(--color-default);
-  font-weight: 200;
-}
-
-form > input {
-  height: 5vh;
-  border: 0;
-  border-radius: 30px;
-}
-
-#form-content {
-  padding: 40vh;
-  display: flex;
-  flex-direction: column;
-}
-
-#form-inputs {
-  display: flex;
-  flex-direction: column;
-  gap: 5p;
-}
 
 #game-information {
   flex: 1;
@@ -308,4 +287,136 @@ form > input {
 
 .checked {
   color: red;
+}
+
+#secao-orcamento{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130rem;
+}
+
+#secao-orcamento form{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: start;
+  row-gap: 5rem;
+  column-gap: 10rem;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  position: relative;
+  font-family: var(--font-default);
+  font-size: 3rem;
+  color: #FFF;
+}
+
+#secao-orcamento h3{
+  font-size: 3rem;
+  font-weight: 500;
+  position: absolute;
+  top: -10%;
+  left: 25%;
+  background-color: #777777;
+  color: #FFF;
+  padding: .7rem;
+  border-radius: 5px;
+}
+
+#layas{
+  display: grid;
+  width: 43rem;
+}
+
+#cat{
+  width: 100%;
+  color: rgb(36, 35, 42);
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 28px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+  background: rgb(251, 251, 251);
+  transition: all 0.1s ease 0s;
+  :focus{
+      border: 2px solid rgb(124, 138, 255);
+  }
+}
+
+#nomi{
+  width: 100%;
+  color: rgb(36, 35, 42);
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 28px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+  background: rgb(251, 251, 251);
+  transition: all 0.1s ease 0s;
+  :focus{
+      border: 2px solid rgb(124, 138, 255);
+  }
+}
+
+#desc{
+  width: 100%;
+  color: rgb(36, 35, 42);
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 28px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+  background: rgb(251, 251, 251);
+  transition: all 0.1s ease 0s;
+  :focus{
+      border: 2px solid rgb(124, 138, 255);
+  }
+}
+
+.button-23 {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.button-23:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.button-23:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+.button-23:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
 }

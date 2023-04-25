@@ -14,7 +14,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-image: url("./assets/images/Top.png");
+  background-image: url("../images/Top.png");
   background-repeat: repeat-x;
   background-color: black;
   animation: color 70s infinite linear;

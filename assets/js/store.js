@@ -13,7 +13,7 @@ data.allLoadedGames.forEach((eachLoadedGame) => {
       html = html + '<span class="fa fa-star"></span>';
     }
  }
- console.log(html);
+
   const newElement = `
     <li class="card">
     <div class="card-image">

@@ -12,14 +12,24 @@ function putInGameInformationCard(game) {
   const divDescription = document.getElementById(
     "game-information-description"
   );
+  const divRate = document.getElementById(
+    "game-information-rate"
+  );
 
-  const star = document.getElementsByClassName("star-rating")[0].getElementsByClassName('fa');
+  const star = document.getElementsByClassName("star-rating")[0];
 
-
-  // setting
   image.setAttribute("src", selectedGame.image);
   divTitle.innerText = selectedGame.title;
   divDescription.innerText = selectedGame.review;
+  let html = '';
+  for (var i = 0; i < 5; i++) {
+    if (selectedGame.rate > i) {
+      html = html + '<span class="fa fa-star checked"></span>';
+    } else {
+      html = html + '<span class="fa fa-star"></span>';
+    }
+ }
+ divRate.innerHTML = html;
 }
 
 function nextImage() {

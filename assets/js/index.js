@@ -6,6 +6,8 @@ function putInGameInformationCard(game) {
   const selectedGame = games.filter(
     (eachGame) => eachGame.idReference === game
   )[0];
+  document
+    .getElementById("game-information").style.display = "initial";
   const image = document
     .getElementById("game-information-img");
   const divTitle = document.getElementById("game-information-title");
@@ -16,8 +18,7 @@ function putInGameInformationCard(game) {
     "game-information-rate"
   );
 
-  const star = document.getElementsByClassName("star-rating")[0];
-
+  console.log(selectedGame)
   image.setAttribute("src", selectedGame.image);
   divTitle.innerText = selectedGame.title;
   divDescription.innerText = selectedGame.review;

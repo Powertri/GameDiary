@@ -15,11 +15,11 @@ data.allLoadedGames.forEach((eachLoadedGame) => {
  }
 
   const newElement = `
-    <li class="card">
+    <li onClick="putInGameInformationCard(this.id)"  id="${eachLoadedGame.idReference}" class="card">
     <div class="card-image">
       <img src="${eachLoadedGame.image}" />
     </div>
-    <div onClick="putInGameInformationCard(this.id)" class="card-info" id="${eachLoadedGame.idReference}">
+    <div class="card-info">
       <h4>${eachLoadedGame.title}</h4>
       <div class="star-rating">
         ${html}

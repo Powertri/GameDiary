@@ -15,7 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="./assets/style.css" />
-    <title>Epic Task</title>
+    <title>Pomodoro</title>
   </head>
 
   <body>
@@ -54,21 +54,11 @@
                 <li>
                   <hr class="dropdown-divider" />
                 </li>
-                <li><a class="dropdown-item" href="#">Cadastrar</a></li>
+                <li><a class="dropdown-item" data-bs-toggle="modal"
+                  data-bs-target="#registerTask" href="#">Cadastrar</a></li>
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="buscar..."
-              aria-label="buscar"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              buscar
-            </button>
-          </form>
         </div>
       </div>
     </nav>
@@ -83,7 +73,7 @@
         type="button"
         class="btn btn-primary"
         data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
+        data-bs-target="#registerTask"
       >
         Cadastrar Tarefa
       </button>
@@ -98,7 +88,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="registerTask"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -123,7 +113,7 @@
                   id="titulo"
                   type="text"
                   class="form-control"
-                  placeholder="título"
+                  placeholder="Tarefa"
                   aria-label="título"
                 />
               </div>
@@ -132,7 +122,7 @@
                   id="descricao"
                   type="text"
                   class="form-control"
-                  placeholder="descrição"
+                  placeholder="Descrição"
                   aria-label="descrição"
                 />
               </div>
@@ -143,6 +133,7 @@
                   class="form-control"
                   placeholder="Pomodoro"
                   aria-label="pomodoro"
+                  min="0"
                 />
               </div>
             </div>

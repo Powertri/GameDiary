@@ -1,6 +1,8 @@
 document.querySelector("#salvar").addEventListener("click", cadastrar);
+const listaTarefa = [];
 
 function cadastrar() {
+  const modal = bootstrap.Modal.getInstance(document.querySelector("#registerTask"));
   let titulo = document.querySelector("#titulo").value;
   let descricao = document.querySelector("#descricao").value;
   let pomodoros = document.querySelector("#pomodoro").value;
@@ -10,13 +12,21 @@ function cadastrar() {
     descricao,
     pomodoros,
   };
+  if (tarefa.titulo.length == 0){
+    document.querySelector('#titulo').classList.add("is-invalid");
+  }
+  listaTarefa.push(tarefa);
 
   document.querySelector("#tarefas").innerHTML += create(tarefa);
+
+
+  localStorage.setItem("listaTarefa", JSON.stringify(listaTarefa));
+  modal.hide()
 }
 
 function create(tarefa) {
   return `<div class="col-12 col-md-6 col-lg-3">
-                <div onclick="changeBackgroundColor(this.id)" id="card-${tarefa.titulo}" class="card">
+                <div onclick="changeBackgroundColor(this)" class="card">
                     <div class="card-header">
                         ${tarefa.titulo}
                     </div>
@@ -30,7 +40,7 @@ function create(tarefa) {
                         <a href="#" class="btn btn-success">
                             <i class="bi bi-check-lg"></i>
                         </a>
-                        <a href="#" class="btn btn-danger">
+                        <a href="#" onclick="erase(this)" class="btn btn-danger">
                             <i class="bi bi-trash"></i>
                         </a>
                     </div>
@@ -40,7 +50,7 @@ function create(tarefa) {
 
 let isRunning = false;
 let timer = {
-  minutes: 1,
+  minutes: 25,
   seconds: 0,
 };
 let intervalSeconds = 1000;
@@ -51,11 +61,8 @@ var interval;
 
 updateClock();
 
-function changeBackgroundColor(id) {
-    console.log(id);
-    const card = document.getElementById(`card-${id}`);
-    console.log(card.style.background);
-    card.style.background = 'blue';
+function changeBackgroundColor(card) {
+    card.style.backgroundColor = '#d3d4d9';
 }
 
 function startToRun() {
@@ -102,3 +109,15 @@ function updateClock() {
   min.textContent = minutes;
   sec.textContent = seconds;
 }
+
+function erase(button) {
+  button.parentNode.parentNode.parentNode.remove();
+}
+
+window.addEventListener("load", () => {
+  const tarefas = JSON.parse(localStorage.getItem('listaTarefa'))
+  tarefas.forEach(each => {
+    document.querySelector("#tarefas").innerHTML += create(each);
+  
+  });
+});
